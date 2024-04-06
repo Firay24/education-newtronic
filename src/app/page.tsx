@@ -1,8 +1,9 @@
+import CardPlaylist from "@/components/CardPlaylist";
 import Hero from "@/components/Hero";
 import StaticItem from "@/components/StaticItem";
 import { StaticProps } from "@/types/static";
 import { dataStatic } from "@/utils/dataStatic";
-import { Grid, Stack } from "@mui/material";
+import { Divider, Grid, Stack, Typography } from "@mui/material";
 
 export default function Home() {
   return (
@@ -25,6 +26,24 @@ export default function Home() {
             </Grid>
           ))}
         </Grid>
+      </Stack>
+      <Stack paddingX={5} gap={3}>
+        <Stack>
+          <Typography variant="h4" fontWeight="bold">
+            Our Playlist
+          </Typography>
+          <Divider
+            sx={{
+              width: "10%",
+              borderColor: "primary.main",
+              borderWidth: 2,
+              marginY: 2,
+            }}
+          />
+        </Stack>
+        <Stack>
+          <CardPlaylist />
+        </Stack>
       </Stack>
     </Stack>
   );
