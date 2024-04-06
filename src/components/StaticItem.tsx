@@ -5,7 +5,7 @@ import { StaticProps } from "@/types/static";
 
 const StaticItem = ({ value, label, favicon }: StaticProps) => {
   return (
-    <Stack direction="row" alignItems="center" gap={3}>
+    <Stack direction={{ xs: "column", md: "row" }} alignItems="center" gap={3}>
       <Icon component={favicon} sx={{ fontSize: 45, color: "primary.main" }} />
       <Stack>
         <Typography variant="h5" fontWeight="bold">

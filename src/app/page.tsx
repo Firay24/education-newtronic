@@ -2,23 +2,29 @@ import Hero from "@/components/Hero";
 import StaticItem from "@/components/StaticItem";
 import { StaticProps } from "@/types/static";
 import { dataStatic } from "@/utils/dataStatic";
-import { Stack } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 
 export default function Home() {
   return (
     <Stack gap={10} paddingBottom={8}>
       <Hero />
       <Stack width="full" alignItems="center">
-        <Stack
+        <Grid
+          container
           direction="row"
-          paddingX={5}
-          width="60%"
-          justifyContent="space-between"
+          spacing={5}
+          justifyContent={{ xs: "center", md: "space-between" }}
+          sx={{
+            paddingX: 5,
+            width: { xs: "100%", md: "60%", xl: "30%" },
+          }}
         >
           {dataStatic.map((item: StaticProps) => (
-            <StaticItem key={item.label} {...item} />
+            <Grid item key={item.label}>
+              <StaticItem {...item} />
+            </Grid>
           ))}
-        </Stack>
+        </Grid>
       </Stack>
     </Stack>
   );

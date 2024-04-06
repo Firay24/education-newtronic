@@ -25,14 +25,20 @@ const Hero = () => {
           justifyContent="center"
           gap={3}
         >
-          <Stack>
-            <Typography variant="h1" fontSize={56} fontWeight="bold">
+          <Stack alignItems="center">
+            <Typography
+              variant="h1"
+              fontSize={{ xs: 40, md: 56 }}
+              fontWeight="bold"
+            >
               Education Newtronic
             </Typography>
-            <Typography variant="body1">
-              Aplikasi dalam bidang pendidikan yang dikembangkan oleh perusahaan
-              newtronic
-            </Typography>
+            <Stack width={{ xs: "80%", md: "100%" }}>
+              <Typography variant="body1" fontSize={{ xs: 14, md: 16 }}>
+                Aplikasi dalam bidang pendidikan yang dikembangkan oleh
+                perusahaan newtronic
+              </Typography>
+            </Stack>
           </Stack>
           <Stack alignItems="center">
             <Button
