@@ -30,21 +30,26 @@ const CardPlaylist = () => {
           species, ranging across all continents except Antarctica
         </Typography>
       </CardContent>
-      <CardActions
-        sx={{ marginX: 1, marginBottom: 1, justifyContent: "space-between" }}
-      >
-        <Stack direction="row" alignItems="center" gap={1} color="grey.600">
-          <AccessTimeFilledIcon style={{ fontSize: 16 }} />
-          <Typography variant="body2">12 April 2023</Typography>
-        </Stack>
-        <Button
-          variant="contained"
-          size="small"
-          startIcon={<DownloadIcon />}
-          sx={{ borderRadius: "99px" }}
+      <CardActions sx={{ marginX: 1, marginBottom: 1 }}>
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          gap={{ xs: 1, md: "auto" }}
+          width="100%"
+          justifyContent="space-between"
         >
-          Download
-        </Button>
+          <Stack direction="row" alignItems="center" gap={1} color="grey.600">
+            <AccessTimeFilledIcon style={{ fontSize: 16 }} />
+            <Typography variant="body2">12 April 2023</Typography>
+          </Stack>
+          <Button
+            variant="contained"
+            size="small"
+            startIcon={<DownloadIcon />}
+            sx={{ borderRadius: "99px" }}
+          >
+            Download
+          </Button>
+        </Stack>
       </CardActions>
     </Card>
   );

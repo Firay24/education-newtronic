@@ -13,7 +13,7 @@ import { RiInstagramFill } from "react-icons/ri";
 export const Footer = () => {
   return (
     <Container>
-      <Stack textAlign="center" paddingY={3}>
+      <Stack textAlign="center" paddingBottom={3}>
         <Divider />
         <Grid container justifyContent="center" marginTop={3}>
           <Grid item>

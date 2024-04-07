@@ -7,7 +7,7 @@ import { Container, Divider, Grid, Stack, Typography } from "@mui/material";
 
 export default function Home() {
   return (
-    <Stack gap={10} paddingBottom={8}>
+    <Stack gap={8} paddingBottom={8}>
       <Container>
         <Hero />
       </Container>
@@ -30,7 +30,12 @@ export default function Home() {
         </Stack>
       </Container>
       <Container>
-        <Stack paddingX={5} alignItems={{ xs: "center", md: "start" }}>
+        <Stack
+          id="playlist"
+          paddingX={5}
+          alignItems={{ xs: "center", md: "start" }}
+          paddingY={4}
+        >
           <Stack>
             <Typography variant="h4" fontWeight="bold">
               Our Playlist
